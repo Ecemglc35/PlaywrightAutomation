@@ -1,4 +1,4 @@
-# Book Repository Automation Testing
+# Playwright DemoQA Automation Testing
 
 This project is a test automation framework built with Playwright and MSTest to validate UI components on the [DemoQA](https://demoqa.com) website.
 
