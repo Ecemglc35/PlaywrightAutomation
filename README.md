@@ -35,5 +35,5 @@ Each test is a well-structured scenario located in its own class, using the Page
 ## Contributing
 Contributions are welcome! Feel free to fork the repository, make changes, and submit a pull request.
 
-##Resources: 
+## Resources: 
 https://playwright.dev/dotnet/docs/intro
