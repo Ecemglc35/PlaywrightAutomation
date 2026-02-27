@@ -13,7 +13,7 @@ public class HomePage
     }
 
     private ILocator ElementsCard => page.GetByRole(AriaRole.Heading, new() { Name = "Elements" } );
-    private ILocator FormsCard => page.GetByRole(AriaRole.Heading, new() { Name = "Froms" } );
+    private ILocator FormsCard => page.GetByRole(AriaRole.Heading, new() { Name = "Forms" } );
     private ILocator AlertsFrameWindowsCard => page.Locator("Alerts, Frame & Windows");
 
     public async Task NavigateHome()

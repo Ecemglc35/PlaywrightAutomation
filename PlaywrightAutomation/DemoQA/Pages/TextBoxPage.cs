@@ -1,17 +1,16 @@
 using Microsoft.Playwright;
 
 namespace PlaywrightAutomation.DemoQA.Pages;
-public class TextBoxPage
+public class TextBoxPage : CommonPage
 {
     private readonly IPage page;
 
-    public TextBoxPage(IPage page)
+    public TextBoxPage(IPage page) : base(page)
     {
         this.page = page;
     }
     #region Locators
     public ILocator FullNameTextBox => page.GetByRole(AriaRole.Textbox, new(){Name = "Full Name"});
-    public ILocator EmailTextBox => page.GetByRole(AriaRole.Textbox, new(){Name = "name@example.com"});
     public ILocator CurrentAddressTextBox => page.GetByRole(AriaRole.Textbox, new(){Name = "Current Address"});
     public ILocator PermenantAddressTextBox => page.Locator("//textarea[contains(@id, 'permanentAddress')]");
     public ILocator SubmitButton => page.GetByRole(AriaRole.Button, new(){ Name = "Submit" });
