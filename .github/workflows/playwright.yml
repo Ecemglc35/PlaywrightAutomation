@@ -19,13 +19,13 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore PlaywrightAutomation/PlaywrightAutomation.csproj
       - name: Build project
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build PlaywrightAutomation/PlaywrightAutomation.csproj --configuration Release --no-restore
       - name: Install Playwright Browsers
-        run: pwsh bin/Release/net8.0/playwright.ps1 install --with-deps
+        run: pwsh PlaywrightAutomation/bin/Release/net8.0/playwright.ps1 install --with-deps
       - name: Run Playwright tests
-        run: dotnet test --no-build --configuration Release
+        run: dotnet test PlaywrightAutomation/PlaywrightAutomation.csproj --no-build --configuration Release
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
