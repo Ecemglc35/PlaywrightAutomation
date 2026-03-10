@@ -9,6 +9,11 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PlaywrightReportFolder>playwright-report</PlaywrightReportFolder>
+    <PlaywrightReportType>html</PlaywrightReportType>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="Microsoft.Playwright.MSTest" Version="1.58.0" />
