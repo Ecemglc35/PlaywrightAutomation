@@ -25,7 +25,7 @@ jobs:
       - name: Install Playwright Browsers
         run: pwsh PlaywrightAutomation/bin/Release/net8.0/playwright.ps1 install --with-deps
       - name: Run Playwright tests
-        run: dotnet test PlaywrightAutomation/PlaywrightAutomation.csproj --no-build --configuration Release
+        run: dotnet test PlaywrightAutomation/PlaywrightAutomation.csproj --logger:"Playwright;LogDir=playwright-report" --no-build --configuration Release
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
